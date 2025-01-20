@@ -91,6 +91,28 @@ dictionary = {
         'thank you': 'gracias',
         'congratulations': 'felicidas'
     },
+    "hausa": {
+        "come": "zo",
+        "go": "je",
+        "father": "wani",
+        "rice": "shinkafa",
+        "fool": "wawa",
+        "home": "gida",
+        "need": "bukata",
+        "again": "sake",
+        "good morning": "barka da safiya",
+        "good afternoon": "barka da yamma",
+        "good bye": "lafiya lau",
+        "good evening": "barka da yamma",
+        "me": "ni",
+        "one": "daya",
+        "two": "biyu",
+        "thank you": "na gode",
+        "stop": "daina",
+        "water": "ruwa",
+        "hello": "sannu",
+        "give me": "jaara"
+    },
 
 
 
@@ -135,5 +157,17 @@ word_entry.pack()
 
 search_button = tk.Button(root, text="Search", command=search_word)
 search_button.pack()
+result_label = tk.Label(root, text="")
+result_label.pack()
+
+words_listbox = tk.Listbox(root)
+words_listbox.pack()
+
+show_button = tk.Button(root, text="Show the available words", command=show_words)
+show_button.pack()
+
+root.mainloop()
+
+
 
 
