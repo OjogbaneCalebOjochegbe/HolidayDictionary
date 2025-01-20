@@ -69,6 +69,28 @@ dictionary = {
         'thank you': 'o se',
         'congratulations': 'ku oriire'
     },
+    "spanish": {
+        'hello': 'hola',
+        'come': 'venir',
+        'go': 'Ir',
+        'stay': 'quedarse',
+        'here': 'aqui',
+        'near': 'cerca',
+        'far': 'lejos',
+        'happy': 'feliz',
+        'sad': 'triste',
+        'filled': 'ileno',
+        'hungry': 'habriento',
+        'money': 'dinero',
+        'please': 'por favor',
+        'name': 'nombre',
+        'food': 'comida',
+        'sorry': 'lo siento',
+        'love': 'amor',
+        'what': 'que',
+        'thank you': 'gracias',
+        'congratulations': 'felicidas'
+    },
 
 
 
@@ -107,5 +129,11 @@ root.title("Multi Language Dictionary")
 
 language_var = tk.StringVar(value='french')
 language_dropdown = ttk.Combobox(root, textvariable=language_var, values=list(dictionary.keys()))
-language_dropdown.pack()      
+language_dropdown.pack() 
+word_entry = tk.Entry(root)
+word_entry.pack()
+
+search_button = tk.Button(root, text="Search", command=search_word)
+search_button.pack()
+
 
