@@ -47,6 +47,28 @@ dictionary = {
         'thank you': 'arigatou',
         'clothes': 'fuku'
     },
+    "Yoruba": {
+        'hello': 'pele o',
+        'come': 'wa',
+        'go': 'lo',
+        'stay': 'duro',
+        'here': 'nibi',
+        'near': 'nitosi',
+        'far': 'ji na',
+        'happy': 'dun',
+        'sad': 'ibanuje',
+        'filled': 'kun',
+        'hungry': 'ebi npa',
+        'money': 'owo',
+        'please': 'jowo',
+        'name': 'oruko',
+        'food': 'onje',
+        'sorry': 'ma binu',
+        'love': 'ife',
+        'what': 'kini?',
+        'thank you': 'o se',
+        'congratulations': 'ku oriire'
+    },
 
 
 
@@ -77,4 +99,13 @@ def show_words():
             words_listbox.insert(tk.END, word)
     else:
         words_listbox.insert(tk.END, "Please select a valid language.")
+
+  # App begins
+root = tk.Tk()
+root.geometry("600x300")
+root.title("Multi Language Dictionary")
+
+language_var = tk.StringVar(value='french')
+language_dropdown = ttk.Combobox(root, textvariable=language_var, values=list(dictionary.keys()))
+language_dropdown.pack()      
 
