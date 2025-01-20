@@ -24,6 +24,32 @@ dictionary = {
         'thank you': 'merci',
         'congratulations': 'félicitations'
     },
+    
+    "japanese": {
+        'hello': 'konnichiwa',
+        'come': 'kuru',
+        'go': 'iku',
+        'stay': 'tomeru',
+        'apple': 'ringo',
+        'water': 'mizu',
+        'milk': 'miruku',
+        'happy': 'shiawase',
+        'boy': 'otokonoko',
+        'girl': 'onnanoko',
+        'hungry': 'onaka suita',
+        'money': 'okane',
+        'please': 'onegai',
+        'good night': 'oyasumi',
+        'good morning': 'ohayou',
+        'sorry': 'gomen',
+        'love': 'ai',
+        'restaurant': 'resutoran',
+        'thank you': 'arigatou',
+        'clothes': 'fuku'
+    },
+
+
+
 
 }
 
@@ -40,3 +66,15 @@ def search_word():
             result_label.config(text=f"Word '{word}' not found in {selected_language}.")
     else:
         result_label.config(text="Please select a valid language.")
+
+def show_words():
+    # Displays the words available in the selected language.
+    words_listbox.delete(0, tk.END)
+    selected_language = language_var.get()
+
+    if selected_language in dictionary:
+        for word in dictionary[selected_language].keys():
+            words_listbox.insert(tk.END, word)
+    else:
+        words_listbox.insert(tk.END, "Please select a valid language.")
+
